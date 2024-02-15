@@ -12,7 +12,7 @@ function getComputerChoice() {
     }
 
 }
-function playRound(playerSelector , comuterSelection)
+function playRound(playerSelector, comuterSelection)
 {
 if(playerSelector === comuterSelection ){
     return "tie"
@@ -25,6 +25,27 @@ else if(playerSelector === "rock"&& comuterSelection ==="scissors"){
     return "you won"
 }else{ return "you lose"}
 }
-const playerSelector = "rock";
-const comuterSelection = getComputerChoice();
-console.log(playRound(playerSelector,comuterSelection))
+
+
+function playGame() {
+    let yourScore =0
+    let computerScore = 0
+    for(let i = 0;i<5;i++){
+        const playerSelector = prompt('enter :');
+        const comuterSelection = getComputerChoice();
+        console.log(playRound(playerSelector, comuterSelection));
+        const result = playRound(playerSelector, comuterSelection);
+        if(result.includes("won")){
+            yourScore++;
+        }else if(result.includes("lose")){
+            computerScore++
+        }
+    }
+    if(yourScore>computerScore){
+        console.log("you win!!!!")
+    }else{
+        console.log("sorry you lost")  
+    }
+
+}
+playGame()
