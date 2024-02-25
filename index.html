@@ -3,9 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    </style>
     <title>Document</title>
   </head>
   <body>
+    
+    <button class="btn" id="rock-btn">Rock</button>
+    <button class="btn" id="scissors-btn">Scissors</button> 
+    <button class="btn" id="paper-btn">Paper</button>
+    <div id="result"></div>
+    <div id="finalResult"></div>
     <script src="rock.js"></script>
   </body>
 </html>
